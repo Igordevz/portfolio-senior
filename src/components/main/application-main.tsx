@@ -1,14 +1,20 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { ScrollControls, Scroll, Box } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import gsap from "gsap";
 import Video from "../models/video";
 import SplitType from "split-type";
+import { projects } from "../projects/projects";
+import Projects from "../projects";
+import Modal from "../projects/pictureModal";
 export default function Main({ setActive }: any): any {
+  const [modal, setModal] = useState({active: false, index: 0})
+
   useEffect(() => {
     new SplitType("#initial");
     new SplitType("#initial2");
+    
 
     gsap.to(".char", {
       y: 0,
@@ -28,7 +34,7 @@ export default function Main({ setActive }: any): any {
             alignItems: "center",
             position: "absolute",
             width: "100%",
-            opacity: 0.2,
+            opacity: 1,
             justifyContent: "center",
           }}
         >
@@ -37,14 +43,14 @@ export default function Main({ setActive }: any): any {
             <Video />
           </group>
         </Canvas>
-        <div className="w-full h-[90vh] flex items-center justify-between  z-10">
+        <div className="w-full h-[90%] flex items-center justify-between  z-10">
           <h1
-            className="text-[white] z-10 text-9xl w-[70%] text-center "
+            className="text-[white] z-10 md:text-9xl text-6xl  w-[70%] cursor-none text-center  mix-blend-difference"
             id="initial"
-            onMouseLeave={() => {
+            onMouseEnter={() => {
               setActive(true);
             }}
-            onMouseOut={() => {
+            onMouseLeave={() => {
               setActive(false);
             }}
           >
@@ -52,22 +58,29 @@ export default function Main({ setActive }: any): any {
           </h1>
           <br />
           <h1
-            className="text-[white] z-10 text-9xl  w-[90%] absolute mt-[200px] text-end"
+            className="text-[white] z-10 md:text-9xl text-6xl  cursor-none w-[90%] absolute mt-[200px] text-end mix-blend-difference"
             id="initial2"
-            onMouseLeave={() => {
+            onMouseEnter={() => {
               setActive(true);
             }}
-            onMouseOut={() => {
+            onMouseLeave={() => {
               setActive(false);
             }}
           >
             {" "}
             Portifolio
           </h1>
-        </div>
+        </div>  
+      </main >
+      <div className="w-full h-screen flex items" id="trigger-2">
+      <main className="flex flex-col w-full h-screen items-center justify-center">
+          <div className="flex flex-col  w-full  items-center justify-around ">
+            {projects.map((project, index)=> {
+              return <Projects index={index} project={project} setModal={setModal} key={index}/>
+            })}
+          </div>
+          <Modal modal={modal} projects={projects}/>
       </main>
-      <div>
-        <h1>leo</h1>
       </div>
     </>
   );

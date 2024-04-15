@@ -10,11 +10,13 @@ export default function Video() {
       <fog attach="fog" args={['red', 15, 20]} />
       <Suspense fallback={null}>
         <group position={[0, -1, 0]}>
+        <spotLight position={[0,-20,0]} intensity={1} color={"red"}/>
+
           <Carla rotation={[0, Math.PI - 0.4, 0]} position={[-1.2, 0, 0.6]} scale={[0.26, 0.26, 0.26]} />
           <VideoText position={[0, .6, -4]} />
           <Ground  />
         </group>
-        <ambientLight intensity={0.5} />
+        <ambientLight intensity={2} />
         <spotLight position={[0, 10, 0]} intensity={0.5} />
         <directionalLight position={[-50, 0, -40]} intensity={0.7} />
         <Intro />
@@ -25,7 +27,9 @@ export default function Video() {
 
 function Carla(props:any) {
   const { scene } = useGLTF('/carla-draco.glb')
-  return <primitive object={scene} {...props} />
+  return (
+      <primitive object={scene} {...props} />
+  )
 }
 
 function VideoText(props:any) {
@@ -45,7 +49,7 @@ function Ground() {
   const [floor, normal] = useTexture(['/SurfaceImperfections003_1K_var1.jpg', '/SurfaceImperfections003_1K_Normal.jpg'])
   return (
     <Reflector position={[0,-0.7,-4]}  blur={[400, 100]} resolution={512} args={[10, 10]} mirror={0.5} mixBlur={6} mixStrength={1.5} rotation={[-Math.PI / 2, 0, Math.PI / 2]}>
-      {(Material:any, props) => <Material color="#222222" metalness={0.4} roughnessMap={floor} normalMap={normal}  {...props} />}
+      {(Material:any, props) => <Material color="#222222" metalness={0.2} roughnessMap={floor} normalMap={normal}  {...props} />}
     </Reflector>
   )
 }
