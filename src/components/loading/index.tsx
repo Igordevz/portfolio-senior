@@ -31,7 +31,7 @@ export default function Loading({children}:any) {
      <div className=''>
       <div className='fixed w-full h-screen z-30 top-0 left-0 pointer-events-none flex'>
         {[...Array(5)].map((_, i:any) => {
-          return <motion.div  {...anim(expand, i)} className='bg-white mix-blend-difference w-[100%] h-[100%] relative'>
+          return <motion.div  key={i} {...anim(expand, i)} className='bg-white mix-blend-difference w-[100%] h-[100%] relative'>
 
           </motion.div>
         })}
