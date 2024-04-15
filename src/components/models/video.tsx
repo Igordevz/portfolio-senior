@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import React, { Suspense, useEffect, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { Reflector, Text, useTexture, useGLTF } from '@react-three/drei2'
+import { Reflector, Text, useTexture, useGLTF } from '@react-three/drei'
 
 export default function Video() {
   return (
