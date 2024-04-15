@@ -40,7 +40,7 @@ export default function Main({ setActive }: any): any {
         >
           <ambientLight intensity={1} />
           <group>
-            <Video />
+            {/* <Video /> */}
           </group>
         </Canvas>
         <div className="w-full h-[90%] flex items-center justify-between  z-10">
@@ -73,7 +73,7 @@ export default function Main({ setActive }: any): any {
         </div>  
       </main >
       <div className="w-full h-screen flex items" id="trigger-2">
-      <main className="flex flex-col w-full h-screen items-center justify-center">
+      <main className="flex flex-col w-full h-auto items-center justify-center">
           <div className="flex flex-col  w-full  items-center justify-around ">
             {projects.map((project, index)=> {
               return <Projects index={index} project={project} setModal={setModal} key={index}/>
