@@ -1,27 +1,27 @@
 export const projects = [
   {
-    title: "Spotify",
+    title: "01 - SPOTIFY",
     color: "purple",
     src: "spotify.png",
     link: "https://spotifycreatebyigor.netlify.app",
     more: "Project"
   }, 
   {
-    title: "Fatec",
+    title: "02 - FATEC",
     color: "#0C134F",
     src: "fatec.png",
     link: "https://site-review-beta.netlify.app/",
     more: "Working"
   },
   {
-    title: "Vestibular online",
+    title: "03 - VESTIBULAR",
     color: "#222222",
     src: "vestibular.png",
     link: "https://testeigor.netlify.app/result",
     more: "Working"
   }, 
   {
-    title: "Nubank",
+    title: "04 - NUBANK",
     color: "purple",
     src: "nubank.png",
     link: "https://youtu.be/_ZW2z8bwxmk?si=HAZacMzHGhviKNQv",

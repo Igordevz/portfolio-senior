@@ -4,22 +4,22 @@ import gsap from "gsap";
 import { useEffect, useRef } from "react";
 
 export default function Cursor({active}:any) {
-  const ref: any = useRef();
+  const ref = useRef(null);
   
   useEffect(() => {
-    const mouseClientX = gsap.quickTo(ref.current, "left", {
-      duration: 0.5,
+    let mouseClientX = gsap.quickTo(ref.current, "left", {
+      duration: 0.8,
       ease: "power3"
     });
-    const mouseClientY = gsap.quickTo(ref.current, "top", {
-      duration: 0.5,
+    let mouseClientY = gsap.quickTo(ref.current, "top", {
+      duration: 0.8,
       ease: "power3"
     });
     window.addEventListener("mousemove", (e) => {
       const { pageX, pageY } = e;
 
-      mouseClientX(pageX - (active ? 90 : 40));
-      mouseClientY(pageY - (active ? 90 : 40));
+      mouseClientX(pageX);
+      mouseClientY(pageY);
     });
   }, []);
 
@@ -28,7 +28,7 @@ export default function Cursor({active}:any) {
     
       ref={ref}
       className={
-        ` ${active ? "h-[200px] w-[200px]" : "h-[40px] w-[40px]"} transition-all z-10 bg-white fixed  rounded-full`}
+        ` ${active ? "h-[200px] w-[200px]" : "h-[40px] w-[40px]"} transition-all z-10 bg-white absolute  rounded-full`}
     ></div>
   );
 }

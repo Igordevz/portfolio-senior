@@ -27,8 +27,6 @@ export default function Modal({ modal, projects }: any) {
   const cursorLabel = useRef(null);
 
   useEffect(() => {
-    //Move Container
-
     let xMoveContainer = gsap.quickTo(modalContainer.current, "left", {
       duration: 0.8,
       ease: "power3",
@@ -39,8 +37,6 @@ export default function Modal({ modal, projects }: any) {
       ease: "power3",
     });
 
-    //Move cursor
-
     let xMoveCursor = gsap.quickTo(cursor.current, "left", {
       duration: 0.5,
       ease: "power3",
@@ -50,8 +46,6 @@ export default function Modal({ modal, projects }: any) {
       duration: 0.5,
       ease: "power3",
     });
-
-    //Move cursor label
 
     let xMoveCursorLabel = gsap.quickTo(cursorLabel.current, "left", {
       duration: 0.45,
@@ -65,17 +59,11 @@ export default function Modal({ modal, projects }: any) {
 
     window.addEventListener("mousemove", (e) => {
       const { pageX, pageY } = e;
-
       xMoveContainer(pageX);
-
       yMoveContainer(pageY);
-
       xMoveCursor(pageX);
-
       yMoveCursor(pageY);
-
       xMoveCursorLabel(pageX);
-
       yMoveCursorLabel(pageY);
     });
   }, []);
@@ -87,7 +75,7 @@ export default function Modal({ modal, projects }: any) {
         variants={scaleAnimation}
         initial="initial"
         animate={active ? "enter" : "closed"}
-        className="h-[300px] w-[300px] absolute bg-white overflow-hidden pointer-events-none flex items-center justify-center"
+        className="h-[300px] w-[300px] absolute hidden md:flex overflow-hidden pointer-events-none  items-center justify-center"
       >
         <div
           style={{ top: index * -100 + "%" }}
@@ -101,7 +89,6 @@ export default function Modal({ modal, projects }: any) {
                 style={{ backgroundColor: color }}
                 key={`modal_${index}`}
               >
-                <a href={project?.link}>
                   <Image
                     className="h-auto"
                     src={`/${src}`}
@@ -109,7 +96,6 @@ export default function Modal({ modal, projects }: any) {
                     height={0}
                     alt="image"
                   />
-                </a>
               </motion.div>
             );
           })}
@@ -118,12 +104,12 @@ export default function Modal({ modal, projects }: any) {
 
       <motion.div
         ref={cursor}
-        className="h-20 w-20 rounded-full bg-blue-600 text-white absolute z-0 flex items-center justify-center text-sm font-light pointer-events-none"
+        className="h-20 w-20 rounded-full bg-blue-600 cursor-pointer text-white absolute z-0 flex items-center justify-center text-sm font-light pointer-events-none"
         variants={scaleAnimation}
         initial="initial"
         animate={active ? "enter" : "closed"}
       >
-        <h1>press</h1>
+        <h1>Click</h1>
       </motion.div>
     </>
   );

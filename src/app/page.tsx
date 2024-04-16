@@ -7,13 +7,11 @@ import Cursor from "@/components/main/cursor";
 import { useState } from "react";
 
 export default function Home() {
-  const [active, setActive] = useState(false);
   return (
     <>
-    <Cursor active={active}/>
       <Header />
       <main>
-        <Main setActive={setActive} />
+        <Main />
       </main>
     </>
   );

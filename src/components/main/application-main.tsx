@@ -8,8 +8,10 @@ import SplitType from "split-type";
 import { projects } from "../projects/projects";
 import Projects from "../projects";
 import Modal from "../projects/pictureModal";
-export default function Main({ setActive }: any): any {
+import Cursor from "./cursor";
+export default function Main(){
   const [modal, setModal] = useState({active: false, index: 0})
+  const [active, setActive] = useState(false);
 
   useEffect(() => {
     new SplitType("#initial");
@@ -26,7 +28,9 @@ export default function Main({ setActive }: any): any {
 
   return (
     <>
-      <main className="bg-black w-full h-screen">
+      <main className="bg-black w-full h-screen relative overflow-hidden ">
+          <Cursor active={active}/>
+
         <Canvas
           camera={{ position: [0, 0, 0], fov: 15 }}
           style={{
@@ -43,9 +47,9 @@ export default function Main({ setActive }: any): any {
             {/* <Video /> */}
           </group>
         </Canvas>
-        <div className="w-full h-[90%] flex items-center justify-between  z-10">
+        <div className="w-full h-[90%] flex items-center justify-between ">
           <h1
-            className="text-[white] z-10 md:text-9xl text-6xl  w-[70%] cursor-none text-center  mix-blend-difference"
+            className="text-[white] z-10 md:text-9xl sm:text-8xl text-6xl  w-[70%] cursor-none text-center  mix-blend-difference"
             id="initial"
             onMouseEnter={() => {
               setActive(true);
@@ -72,7 +76,7 @@ export default function Main({ setActive }: any): any {
           </h1>
         </div>  
       </main >
-      <div className="w-full h-screen flex items" id="trigger-2">
+      <div className="w-full h-auto flex items bg-black z-20" id="trigger-2">
       <main className="flex flex-col w-full h-auto items-center justify-center">
           <div className="flex flex-col  w-full  items-center justify-around ">
             {projects.map((project, index)=> {
