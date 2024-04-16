@@ -28,7 +28,7 @@ export default function Cursor({active}:any) {
     
       ref={ref}
       className={
-        ` ${active ? "h-[200px] w-[200px]" : "h-[40px] w-[40px]"} transition-all z-10 bg-white absolute  rounded-full`}
+        ` ${active ? "h-[200px] w-[200px]" : "h-[40px] w-[40px]"} transition-all z-10 bg-orange-500 absolute  rounded-full`}
     ></div>
   );
 }
