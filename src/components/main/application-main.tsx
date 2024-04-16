@@ -9,38 +9,10 @@ import Projects from "../projects";
 import Modal from "../projects/pictureModal";
 import Cursor from "./cursor";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import eu from "../../../public/eucomfudo.jpeg"
+import eu from "../../../public/eucomfudo.jpeg";
 import Image from "next/image";
 export default function Main() {
-  if ("DeviceMotionEvent" in window) {
-    // Se for suportada, solicite permissão ao usuário
-    if (typeof (DeviceMotionEvent as any).requestPermission === "function") {
-      (DeviceMotionEvent as any)
-        .requestPermission()
-        .then((permissionState: string) => {
-          if (permissionState === "granted") {
-          } else {
-            console.error(
-              "Permissão para acesso aos dispositivos de movimento não foi concedida."
-            );
-          }
-        })
-        .catch((error: any) => {
-          console.error(
-            "Erro ao solicitar permissão para acesso aos dispositivos de movimento:",
-            error
-          );
-        });
-    } else {
-      console.error(
-        "API de dispositivos de movimento não é suportada pelo navegador."
-      );
-    }
-  } else {
-    console.error(
-      "API de dispositivos de movimento não é suportada pelo navegador."
-    );
-  }
+ 
   const [modal, setModal] = useState({ active: false, index: 0 });
   const [active, setActive] = useState(false);
   gsap.registerPlugin(ScrollTrigger);
@@ -51,7 +23,7 @@ export default function Main() {
     gsap.to(".char", {
       y: 0,
       stagger: 0.05,
-      delay: 0.5,
+      delay: 0.7,
       opacity: 1,
     });
     gsap.to("#initial3", {
@@ -62,16 +34,28 @@ export default function Main() {
       x: 0,
       opacity: 1,
     });
+    gsap.to(".picture", {
+      y: 0,
+      stagger: 0.05,
+      opacity: 1, 
+      delay: 2
+    })
   }, []);
 
   return (
     <>
-      <main className="bg-black w-full h-screen relative overflow-hidden ">
+      <main className="bg-black w-full h-screen relative overflow-hidden flex flex-col md:flex-col gap-10 items-center justify-center ">
         <Cursor active={active} />
-      
-        <div className="w-full h-[90%] flex items-center justify-between ">
+        <div className="relative top-0 right-0 md:absolute ">
+          <Image
+            alt="img"
+            src={eu}
+            className="picture w-auto h-[40vh] md:h-[80vh] rounded-sm translate-y-[-115px] opacity-0 mix-blend-difference"
+          />
+        </div>
+        <div className="w-[100%] h-auto md:h-full flex flex-col items-center justify-center relative">
           <h1
-            className="text-[white] z-10 md:text-9xl sm:text-8xl text-3xl absolute md:relative w-[70%] cursor-none text-center  mix-blend-difference"
+            className="text-[white] z-10 md:text-9xl sm:text-8xl text-5xl  md:relative w-[100%] md:w-[70%] cursor-none text-center  mix-blend-difference"
             id="initial"
             onMouseEnter={() => {
               setActive(true);
@@ -80,23 +64,12 @@ export default function Main() {
               setActive(false);
             }}
           >
-            My
+            My Portfolio
           </h1>
-          <Image alt="img" src={eu} className=" char w-auto h-[60vh] md:h-[80vh] mix-blend-difference"/>
-          <br />
-          <h1
-            className="text-[white] z-10 md:text-9xl text-4xl  cursor-none w-[90%] absolute mt-[200px] text-end mix-blend-difference"
-            id="initial2"
-            onMouseEnter={() => {
-              setActive(true);
-            }}
-            onMouseLeave={() => {
-              setActive(false);
-            }}
-          >
-            {" "}
-            Portifolio
-          </h1>
+          <p className="text-zinc-500 text-center  w-[100%] md:w-[70%] z-10 ">
+            Resume: I´am programmer
+          </p>
+          <button className=" my-4 rounded-full text-orange-500  px-5 py-4 border-orange-500 border-[1px]"> Download Curriculo</button>
         </div>
       </main>
       <div className="w-full h-auto flex items bg-black z-20">
