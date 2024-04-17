@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import StyledComponentsRegistry from "../registry";
 import Loading from "@/components/loading";
 import { DeviceOrientationControls } from "@react-three/drei";
 
@@ -20,11 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <StyledComponentsRegistry>
           <Loading>
           {children}
           </Loading>
-        </StyledComponentsRegistry>
       </body>
     </html>
   );
