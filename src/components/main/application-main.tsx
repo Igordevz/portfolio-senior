@@ -12,9 +12,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import eu from "../../../public/eucomfudo.jpeg";
 import Image from "next/image";
 export default function Main() {
- 
   const [modal, setModal] = useState({ active: false, index: 0 });
+  const [button, setButton] = useState(false);
   const [active, setActive] = useState(false);
+  const buttonCurriculo:any = useRef();
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     new SplitType("#initial");
@@ -37,20 +38,32 @@ export default function Main() {
     gsap.to(".picture", {
       y: 0,
       stagger: 0.05,
-      opacity: 1, 
-      delay: 2
-    })
-  }, []);
+      opacity: 1,
+      delay: 2,
+    });
+    //fazer isso amanha
+    // let MouseXElement = gsap.quickTo(buttonCurriculo.current, "left", { 
+    //   duration: 0.5,
+    //   ease: "power3"
+    // })
+
+    // let MouseYElement = gsap.quickTo(buttonCurriculo.current, "top", { 
+    //   duration: 0.5,
+    //   ease: "power3"
+    // })
+
+}, []);
+  
 
   return (
     <>
       <main className="bg-black w-full h-screen relative overflow-hidden flex flex-col md:flex-col gap-10 items-center justify-center ">
         <Cursor active={active} />
-        <div className="relative top-0 right-0 md:absolute ">
+        <div className=" bottom-0 right-0 absolute md:top-0 ">
           <Image
             alt="img"
             src={eu}
-            className="picture w-auto h-[40vh] md:h-[80vh] rounded-sm translate-y-[-115px] opacity-0 mix-blend-difference"
+            className="picture w-auto top-0  h-[40vh] md:h-[80vh] rounded-sm translate-y-[-115px] opacity-0 mix-blend-difference"
           />
         </div>
         <div className="w-[100%] h-auto md:h-full flex flex-col items-center justify-center relative">
@@ -69,7 +82,13 @@ export default function Main() {
           <p className="text-zinc-500 text-center  w-[100%] md:w-[70%] z-10 ">
             Resume: I´am programmer
           </p>
-          <button className=" my-4 rounded-full text-orange-500  px-5 py-4 border-orange-500 border-[1px]"> Download Curriculo</button>
+          <button
+            className=" my-4   rounded-full text-orange-500  px-5 py-4 transition-all  border-orange-500 border-[1px] hover:bg-orange-500 hover:text-white"
+            ref={buttonCurriculo}
+        >
+            {" "}
+            Download Curriculo
+          </button>
         </div>
       </main>
       <div className="w-full h-auto flex items bg-black z-20">
