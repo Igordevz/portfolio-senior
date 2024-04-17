@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import SplitType from "split-type";
-import Cursor from "../app/cursor";
 import eu from "../../public/eucomfudo.jpeg";
 import Image from "next/image";
 
@@ -62,7 +61,6 @@ export default function ContentPrimary() {
   return (
     <>
       <main className="bg-black w-full  h-auto relative min-h-[80vh] overflow-hidden flex flex-col md:flex-col gap-10 items-center justify-center ">
-        <Cursor active={active} />
         <div
           data-scroll
           data-scroll-speed={0.01}
@@ -71,29 +69,32 @@ export default function ContentPrimary() {
           <Image
             alt="img"
             src={eu}
-            className="picture w-full top-0  h-[40vh] md:h-[80vh] rounded-lg  translate-y-[-115px] opacity-0 mix-blend-difference"
+            className="picture w-full  h-[40vh] md:h-[80vh] rounded-lg  translate-y-[-115px] opacity-0"
           />
         </div>
         <div
           data-scroll
           data-scroll-speed={0.1}
-          className="w-[100%] h-auto md:h-full flex flex-col items-center justify-center relative"
+          className="w-[100%]   h-auto  md:h-full flex flex-col items-center justify-center gap-4 char "
         >
-          <h1
-            className="text-[white] z-10 md:text-9xl sm:text-8xl text-5xl  md:relative w-[100%] md:w-[70%] cursor-none text-center  mix-blend-difference"
-            id="initial"
-            onMouseEnter={() => {
-              setActive(true);
-            }}
-            onMouseLeave={() => {
-              setActive(false);
-            }}
-          >
-            My Portfolio
-          </h1>
-          <p className="text-zinc-500 text-center  w-[100%] md:w-[70%] z-10 ">
-            Resume: I´am programmer
-          </p>
+          <div className="w-full flex items-center justify-center flex-col   ">
+            {" "}
+            <h1
+              className="text-[white]  sm:text-5xl lg:text-[150px] md:text-9xl text-5xl  w-[100%] md:w-[70%]  text-center"
+              id="initial"
+              onMouseEnter={() => {
+                setActive(true);
+              }}
+              onMouseLeave={() => {
+                setActive(false);
+              }}
+            >
+              MY PORTFOLIO
+            </h1>
+            <p className="text-zinc-500 text-center   w-[100%] md:w-[70%] z-10 ">
+              Resume: I´am programmer
+            </p>
+          </div>
           <button
             className=" my-4   rounded-full text-blue-500  px-5 py-4 transition-all  border-blue-500 border-[1px] hover:bg-blue-500 hover:text-white"
             ref={buttonCurriculo}
@@ -102,6 +103,7 @@ export default function ContentPrimary() {
             Download Curriculo
           </button>
         </div>
+        <button></button>
       </main>
     </>
   );

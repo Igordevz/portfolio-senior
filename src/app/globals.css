@@ -50,14 +50,25 @@
     --ring: 240 4.9% 83.9%;
   }
 }
-
+@font-face {
+  font-family: "Bigilla";
+  src: url("/Bigilla.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 *{
   margin: 0;
-  font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
   padding: 0;
 }
+body h1{
+  font-weight: 400;
+  font-family: "Bigilla";
+}
+body{
+  font-family: "Montserrat", sans-serif;
 
+}
 .char {
   opacity: 0;
   transform: translateY(115px);
