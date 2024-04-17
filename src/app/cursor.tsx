@@ -8,12 +8,12 @@ export default function Cursor({active}:any) {
   
   useEffect(() => {
     let mouseClientX = gsap.quickTo(ref.current, "left", {
-      duration: 0.8,
-      ease: "power3"
+      duration: 0.05,
+      ease: "elastic.out"
     });
     let mouseClientY = gsap.quickTo(ref.current, "top", {
-      duration: 0.8,
-      ease: "power3"
+      duration: 0.05,
+      ease: "elastic.out"
     });
     window.addEventListener("mousemove", (e) => {
       const { pageX, pageY } = e;

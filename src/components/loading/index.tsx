@@ -19,9 +19,9 @@ export default function Loading({children}:any) {
     },
     enter: (i:any) => ({
       top: "105%", 
-      background:"white",
+      background:"#F97316",
       transition: {
-        duration: .5,
+        duration: 0.8,
         delay:0.05 * i
       },
      

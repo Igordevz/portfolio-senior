@@ -1,11 +1,10 @@
-import Main from "@/components/main/application-main";
+import ControllersPageLanding from "@/components/pages-contents";
 
 export default function Home() {
+ 
   return (
     <>
-      <main>
-        <Main />
-      </main>
+     <ControllersPageLanding/>
     </>
   );
 }
