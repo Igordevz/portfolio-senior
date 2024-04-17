@@ -10,7 +10,6 @@ export default function ContentPrimary() {
   const [active, setActive] = useState(false);
   const buttonCurriculo: any = useRef();
 
-
   useEffect(() => {
     new SplitType("#initial");
     new SplitType("#initial2");
@@ -60,7 +59,6 @@ export default function ContentPrimary() {
     });
   }, []);
 
-
   return (
     <>
       <main className="bg-black w-full  h-auto relative min-h-[80vh] overflow-hidden flex flex-col md:flex-col gap-10 items-center justify-center ">
@@ -105,8 +103,6 @@ export default function ContentPrimary() {
           </button>
         </div>
       </main>
-
     </>
   );
 }
-
