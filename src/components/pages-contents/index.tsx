@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react'
 import ContentSecundary from '../container-projects'
 import ContentPrimary from '../application-main';
-import Menu from '../Menu';
+import About from '../about';
 
 export default function ControllersPageLanding() {
   useEffect(() => {
@@ -16,6 +16,7 @@ export default function ControllersPageLanding() {
       <>
       <ContentPrimary/>
       <ContentSecundary/>
+      <About/>
       </>
   )
 }
