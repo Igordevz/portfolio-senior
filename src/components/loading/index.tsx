@@ -15,11 +15,11 @@ export default function Loading({children}:any) {
   const expand ={
     initial: {
       top:0 ,
-      background:"black",
+      background:"blue",
     },
     enter: (i:any) => ({
       top: "105%", 
-      background:"#F97316",
+      background:"#fff",
       transition: {
         duration: 0.8,
         delay:0.05 * i

@@ -12,7 +12,7 @@ import bg from "../../public/bg.jpg";
 import Image from "next/image";
 export default function About() {
   const { scrollYProgress } = useViewportScroll();
-  const scale = useTransform(scrollYProgress, [0.75, 0.85], [0, 1]);
+  const scale = useTransform(scrollYProgress, [0.8, 0.9], [0, 1]);
 
   const container = useRef(null);
   const view = useInView(container);
@@ -74,7 +74,13 @@ export default function About() {
         </motion.div>
       </div>
 
-      <div className="flex flex-col  gap-7 md:gap-0 justify-evenly text-white w-full md:flex-row">
+      <motion.div
+        ref={container2}
+        variants={animate}
+        animate={view2 ? "enter" : "closed"}
+        initial={"initial"}
+        className="flex flex-col items-center  gap-7 md:gap-0 justify-evenly text-white w-full md:flex-row"
+      >
         <div className=" relative">
           <motion.img
             src="/bg.jpg"
@@ -85,15 +91,54 @@ export default function About() {
           <motion.img
             src="/bg.jpg"
             alt="img"
-            style={{ opacity:scale}}
+            style={{ opacity: scale }}
             className=" w-[500px] scale-[0.5] z-10 absolute bottom-0 object-cover   "
           />
         </div>
-        <div className="">
-          <h1 className="md:text-4xl text-2xl">FRONTEND</h1>
-          <h2>Eu sou desenvolvedor frontend </h2>
+        <div className="w-[50%]">
+          <div className="w-full">
+            <h1 className="md:text-4xl text-2xl">FRONTEND</h1>
+            <h2 className="text-purple-300"> - Tech Stacks</h2>
+            <h2>
+              Sou Desenvolvedor <b>FRONTEND</b> e desde os 14 anos de idade
+              tenho me esforçado para aprender mais sobre essa área.{" "}
+              <strong className="text-purple-300">
+                Coleção de Aprendizado dessa Área:
+              </strong>{" "}
+            </h2>
+            <div className="my-3">
+                <pre className="bg-zinc-800 p-4 rounded-lg">
+                  <code className="text-yellow-400">const</code> aprendizado ={" "}
+                  <code className="text-green-400">{"{"}</code>
+                  <br />
+                  <code className="text-blue-400">2019:</code>{" "}
+                  <code className="text-purple-400">
+                    "Estava aprendendo HTML5 - CSS - JS"
+                  </code>
+                  ,
+                  <br />
+                  <code className="text-blue-400">2020:</code>{" "}
+                  <code className="text-purple-400">
+                    "Estava aprendendo consumo de API, Responsive e conceitos
+                    FlexBox"
+                  </code>
+                  <code className="text-green-400">{"};"}</code>
+                </pre>
+            </div>
+          </div>
+          {/* <div className="w-full">
+            <h1 className="md:text-4xl text-2xl">BACKEND</h1>
+            <h2 className="text-purple-700"> - Tech Stacks</h2>
+            <h2>
+              Sou Desenvolvedor <b>BACKEND</b> e desde os 14 anos de idade
+              tenho me esforçado para aprender mais sobre essa área{" "}
+            </h2>
+           <div className="my-10">
+               <span className="md:text-2xl text-xl text-zinc-700 ">-  2020 </span>
+           </div>
+          </div> */}
         </div>
-      </div>
+      </motion.div>
       <div></div>
     </div>
   );
