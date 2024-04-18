@@ -4,7 +4,6 @@ import gsap from "gsap";
 import SplitType from "split-type";
 import eu from "../../public/eucomfudo.jpeg";
 import Image from "next/image";
-
 export default function ContentPrimary() {
   const [active, setActive] = useState(false);
   const buttonCurriculo: any = useRef();
@@ -95,13 +94,14 @@ export default function ContentPrimary() {
               Resume: I´am programmer
             </p>
           </div>
-          <button
+          <a href="/curriculo4.0.pdf"
+          target="_blank"
             className=" my-4   rounded-full text-blue-500  px-5 py-4 transition-all  border-blue-500 border-[1px] hover:bg-blue-500 hover:text-white"
             ref={buttonCurriculo}
           >
             {" "}
-            Download Curriculo
-          </button>
+            Curriculo Resume
+          </a>
         </div>
         <button></button>
       </main>
