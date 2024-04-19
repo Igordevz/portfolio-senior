@@ -7,6 +7,13 @@ export const projects = [
     more: "Project"
   }, 
   {
+    title: "01 - WIDGETS",
+    color: "#111111",
+    src: "project.png",
+    link: "https://widgets-rocket-igor.netlify.app",
+    more: "Project"
+  }, 
+  {
     title: "02 - FATEC",
     color: "#0C134F",
     src: "fatec.png",
@@ -15,7 +22,7 @@ export const projects = [
   },
   {
     title: "03 - VESTIBULAR",
-    color: "#222222",
+    color: "#111111",
     src: "vestibular.png",
     link: "https://testeigor.netlify.app/result",
     more: "Working"

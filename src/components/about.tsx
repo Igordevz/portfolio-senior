@@ -11,8 +11,6 @@ import { motion } from "framer-motion";
 import bg from "../../public/bg.jpg";
 import Image from "next/image";
 export default function About() {
-  const { scrollYProgress } = useViewportScroll();
-  const scale = useTransform(scrollYProgress, [0.8, 0.9], [0, 1]);
 
   const container = useRef(null);
   const view = useInView(container);
@@ -79,64 +77,120 @@ export default function About() {
         variants={animate}
         animate={view2 ? "enter" : "closed"}
         initial={"initial"}
-        className="flex flex-col items-center  gap-7 md:gap-0 justify-evenly text-white w-full md:flex-row"
+        className="flex flex-col items-center  gap-7 md:gap-0 justify-evenly  text-white w-full md:flex-row"
       >
-        <div className=" relative">
+        <div className=" relative w-full md:w-auto flex items-center justify-center md:flex-none">
           <motion.img
             src="/bg.jpg"
             alt="img"
             className=" w-[500px] h-[500px] absolute saturate-0  bottom-0 z-10  "
           />
-          <div className="w-[500px] h-[500px] "></div>
+          <div className="md:w-[500px] w-[94%] h-[500px] "></div>
           <motion.img
             src="/bg.jpg"
             alt="img"
-            style={{ opacity: scale }}
-            className=" w-[500px] scale-[0.5] z-10 absolute bottom-0 object-cover   "
+            className=" md:w-[500px] w-[94%] scale-[0.5] z-10 absolute bottom-0 object-cover   "
           />
         </div>
-        <div className="w-[50%]">
+        <div className="md:w-[50%] py-10 w-[94%] flex flex-col gap-5">
           <div className="w-full">
             <h1 className="md:text-4xl text-2xl">FRONTEND</h1>
-            <h2 className="text-purple-300"> - Tech Stacks</h2>
+            <h2 className="text-blue-300"> - Tech Stacks</h2>
             <h2>
-              Sou Desenvolvedor <b>FRONTEND</b> e desde os 14 anos de idade
-              tenho me esforçado para aprender mais sobre essa área.{" "}
-              <strong className="text-purple-300">
+              Sou um desenvolvedor especializado em <b>Frontend</b> e minha
+              jornada nessa área começou aos 15 anos de idade. Desde então,
+              tenho dedicado meus esforços para aprimorar minhas habilidades e
+              conhecimentos neste campo.{""}
+              <strong className="text-blue-300">
                 Coleção de Aprendizado dessa Área:
               </strong>{" "}
             </h2>
             <div className="my-3">
-                <pre className="bg-zinc-800 p-4 rounded-lg">
-                  <code className="text-yellow-400">const</code> aprendizado ={" "}
-                  <code className="text-green-400">{"{"}</code>
-                  <br />
-                  <code className="text-blue-400">2019:</code>{" "}
-                  <code className="text-purple-400">
-                    "Estava aprendendo HTML5 - CSS - JS"
-                  </code>
-                  ,
-                  <br />
-                  <code className="text-blue-400">2020:</code>{" "}
-                  <code className="text-purple-400">
-                    "Estava aprendendo consumo de API, Responsive e conceitos
-                    FlexBox"
-                  </code>
-                  <code className="text-green-400">{"};"}</code>
-                </pre>
+              <code className="text-yellow-400">const</code>{" "}
+              <code>cronograma</code> ={" "}
+              <code className="text-green-400">{"{"}</code>
+              <br />
+              <code className="text-blue-400">2020:</code>{" "}
+              <code className="text-pink-400">
+                "Aprendendo HTML5 - CSS - JS - Responsive e conceitos",
+              </code>
+              <br />
+              <code className="text-blue-400">2021:</code>{" "}
+              <code className="text-pink-400">
+                "Apredendo Conceitos Avançados De Javascript",
+              </code>
+              <br />
+              <code className="text-blue-400">2022:</code>{" "}
+              <code className="text-pink-400">
+                "Aprendendo consumo de API e a sua criação, React - React-native - styled-components - gsap",
+              </code>
+              <br />
+              <code className="text-blue-400">2023:</code>{" "}
+              <code className="text-pink-400">
+                "Aprendendo Nextjs - Minha Primeira vaga de trabalho como Dev Fullstack - Estágio",
+              </code>
+              <br />
+              <code className="text-blue-400">2024:</code>{" "}
+              <code className="text-pink-400">
+                "Preparatório para avançar com minhas habilidades na carreira e
+                mais estudo"
+              </code>
+              <br />
+              <code className="text-green-400">{"};"}</code>
             </div>
           </div>
-          {/* <div className="w-full">
+          <div className="w-full">
             <h1 className="md:text-4xl text-2xl">BACKEND</h1>
-            <h2 className="text-purple-700"> - Tech Stacks</h2>
+            <h2 className="text-blue-300"> - Tech Stacks</h2>
             <h2>
-              Sou Desenvolvedor <b>BACKEND</b> e desde os 14 anos de idade
-              tenho me esforçado para aprender mais sobre essa área{" "}
+              Como um desenvolvedor especializado também em <b>Backend</b>,
+              estou comprometido em criar sistemas robustos e eficientes que
+              impulsionem o funcionamento de aplicativos e sites. Minha jornada
+              nesta área é marcada por uma busca contínua pela excelência
+              técnica e pelo aprimoramento constante das minhas habilidades.{""}
+              <strong className="text-blue-300">
+                Coleção de Aprendizado dessa Área:
+              </strong>{" "}
             </h2>
-           <div className="my-10">
-               <span className="md:text-2xl text-xl text-zinc-700 ">-  2020 </span>
-           </div>
-          </div> */}
+            <div className="my-3">
+              <code className="text-yellow-400">const</code>{" "}
+              <code>cronograma</code> ={" "}
+              <code className="text-green-400">{"{"}</code>
+              <br />
+              <code className="text-blue-400">2022:</code>{" "}
+              <code className="text-pink-400 max-w-full">
+                "Inciei Aprendendo a criar um servidor Básico"
+              </code>
+              ,
+              <br />
+              <code className="text-blue-400">2022.2:</code>{" "}
+              <code className="text-pink-400 max-w-full">
+                "Aprendendo a criar modelos no banco de dados"
+              </code>
+              ,
+              <br />
+              <code className="text-blue-400">2023:</code>{" "}
+              <code className="text-pink-400 max-w-[80%]">
+                "Criação de projetos:{" "}
+                <a
+                  href="https://github.com/Igordevz/authentication---backend"
+                  target="_blank"
+                  className="bg-zinc-800 underline p-1 rounded-full mx-2"
+                >
+                  Authentication
+                </a> 
+                <a href="https://github.com/Igordevz/system-assessment-company" target="_blank" className="bg-zinc-800 mx-2 underline p-1 rounded-full">Sistema avaliação de satisfação</a>
+               entre outros que são privados... "
+              </code>
+              <br />
+              <code className="text-blue-400">2023.2:</code>{" "}
+              <code className="text-pink-400 max-w-[80%]">
+                "Minha primeira vaga como fullstack - estágio "
+              </code>
+              <br />
+              <code className="text-green-400">{"};"}</code>
+            </div>
+          </div>
         </div>
       </motion.div>
       <div></div>

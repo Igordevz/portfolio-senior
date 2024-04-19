@@ -48,8 +48,8 @@ export default function ContentPrimary() {
       const x = pageX - (left + width / 2);
       const y = pageY - (top + height / 2);
 
-      Ymove(y * 1.5);
-      Xmove(x * 1.5);
+      Ymove(y * 0.5);
+      Xmove(x * 0.5);
     });
     buttonCurriculo.current.addEventListener("mouseleave", (e: any) => {
       Ymove(0);
@@ -100,7 +100,7 @@ export default function ContentPrimary() {
             ref={buttonCurriculo}
           >
             {" "}
-            Curriculo Resume
+            Curriculo PDF
           </a>
         </div>
         <button></button>
