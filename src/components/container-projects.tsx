@@ -84,13 +84,13 @@ function PageTextHorizontal() {
       ref={slider}
     >
       <h3
-        className="text-orange-500 md:text-8xl text-5xl relative flex-nowrap"
+        className="text-zinc-800 md:text-8xl text-5xl relative flex-nowrap"
         ref={secondText}
       >
         DEPLOYMENTS
       </h3>
       <h3
-        className="text-orange-500 md:text-8xl text-5xl relative flex-nowrap"
+        className="text-zinc-800 md:text-8xl text-5xl relative flex-nowrap"
         ref={firstText}
       >
         DEPLOYMENTS

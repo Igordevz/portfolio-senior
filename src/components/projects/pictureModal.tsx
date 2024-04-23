@@ -104,7 +104,7 @@ export default function Modal({ modal, projects }: any) {
 
       <motion.div
         ref={cursor}
-        className="h-20 w-20 rounded-full bg-blue-600 cursor-pointer text-white absolute z-0 flex items-center justify-center text-sm font-light pointer-events-none"
+        className="h-20 w-20 rounded-full bg-zinc-950 cursor-pointer text-white absolute z-0 flex items-center justify-center text-sm font-light pointer-events-none"
         variants={scaleAnimation}
         initial="initial"
         animate={active ? "enter" : "closed"}
