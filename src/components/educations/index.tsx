@@ -9,8 +9,8 @@ export default function Education(){
         </div>
         <div className="flex flex-col h-auto w-full gap-4 pb-10 items-center">
             {Courses.map((info) => (
-              <div className="text-center flex flex-col  items-center justify-center opacity-25 duration-500 hover:opacity-100 hover:bg-blue-600  pb-5">
-                <h2 className="text-zinc-300 md:text-2xl   py-2">{info?.title}</h2>
+              <div className="text-center flex flex-col  items-center justify-center opacity-25 duration-500 hover:opacity-100 rounded-lg hover:bg-zinc-950   pb-5">
+                <h2 className="text-zinc-300 md:text-2xl  px-4 pt-6">{info?.title}</h2>
                 <p className="text-gray-400  py-2 ">{info?.details}</p>
               </div>
             ))}          

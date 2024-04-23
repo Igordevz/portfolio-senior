@@ -47,7 +47,7 @@ export default function About() {
           initial={"initial"}
           className="md:text-9xl text-5xl text-gray-300"
         >
-          ABOUT US
+          SOBRE MIM
         </motion.h1>
       </div>
       <div className="overflow-hidden">

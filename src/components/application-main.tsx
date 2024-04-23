@@ -88,14 +88,15 @@ export default function ContentPrimary() {
                 setActive(false);
               }}
             >
-              MY PORTFOLIO
+              MEU PORTFÓLIO
             </h1>
-            <p className="text-zinc-500 text-center   w-[100%] md:w-[70%] z-10 ">
-              Resume: I´am programmer
+            <p className="text-zinc-300 text-center   w-[100%] md:w-[70%] z-10 ">
+              Sou um programador e gostaria que me conhecesse.
             </p>
           </div>
-          <a href="/curriculo4.0.pdf"
-          target="_blank"
+          <a
+            href="/curriculo4.0.pdf"
+            target="_blank"
             className=" my-4   rounded-full text-blue-500  px-5 py-4 transition-all  border-blue-500 border-[1px] hover:bg-blue-500 hover:text-white"
             ref={buttonCurriculo}
           >
