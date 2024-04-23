@@ -4,6 +4,7 @@ import ContentSecundary from '../container-projects'
 import ContentPrimary from '../application-main';
 import About from '../about';
 import Education from '../educations';
+import Contact from '../contact';
 
 export default function ControllersPageLanding() {
   useEffect(() => {
@@ -19,6 +20,7 @@ export default function ControllersPageLanding() {
       <ContentSecundary/>
       <About/>
       <Education/>
+      <Contact/>
       </>
   )
 }
