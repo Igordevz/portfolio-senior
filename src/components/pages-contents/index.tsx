@@ -17,7 +17,7 @@ export default function ControllersPageLanding() {
   return (
       <>
       <ContentPrimary/>
-      <ContentSecundary/>
+      <ContentSecundary />
       <About/>
       <Education/>
       <Contact/>

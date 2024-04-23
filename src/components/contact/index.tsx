@@ -2,7 +2,7 @@ import React from "react";
 import { Github, Instagram, Linkedin, Send } from "lucide-react";
 export default function Contact() {
   return (
-    <div className="w-full h-[auto] flex md:flex-row flex-col items-center md:gap-0 gap-6 md:items-baseline justify-center md:justify-around bg-black py-20">
+    <div id="contact" className="w-full h-[auto] flex md:flex-row flex-col items-center md:gap-0 gap-6 md:items-baseline justify-center md:justify-around bg-black py-20">
       <div className="flex md:ml-20 w-[90%] md:w-auto flex-col text-white justify-center gap-6  ">
         <h1 className="md:text-7xl text-5xl text-gray-300">Contato</h1>
 

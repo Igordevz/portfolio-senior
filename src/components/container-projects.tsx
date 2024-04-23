@@ -9,7 +9,7 @@ export default function ContentSecundary() {
   const [modal, setModal] = useState({ active: false, index: 0 });
 
   return (
-    <div className="w-full h-auto flex items bg-black z-20 ">
+    <div id='projects' className="w-full h-auto flex items bg-black z-20 ">
     <main
       className="flex flex-col w-full h-auto items-center justify-center"
       id="trigger-2"

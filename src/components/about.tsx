@@ -12,51 +12,18 @@ import bg from "../../public/bg.jpg";
 import Image from "next/image";
 
 export default function About() {
-  const container = useRef(null);
-  const view = useInView(container);
-  const container2 = useRef(null);
-  const view2 = useInView(container2);
-
-  const animate = {
-    initial: {
-      opacity: 0,
-      rotateX: 20,
-    },
-    enter: {
-      rotateX: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.75,
-        delay: 0.5,
-      },
-    },
-    closed: {
-      opacity: 0,
-    },
-  };
-
   return (
     <div
-      ref={container}
+      id="about"
       className="flex flex-col w-full h-auto py-7 bg-black items-center justify-center md:gap-20 gap-7"
     >
       <div className="">
-        <motion.h1
-          variants={animate}
-          animate={view ? "enter" : "closed"}
-          initial={"initial"}
-          className="md:text-9xl text-5xl text-gray-300"
-        >
+        <motion.h1 className="md:text-9xl text-5xl text-gray-300">
           SOBRE MIM
         </motion.h1>
       </div>
       <div className="overflow-hidden">
-        <motion.div
-          variants={animate}
-          animate={view ? "enter" : "closed"}
-          initial={"initial"}
-          className="pb-10 flex flex-col justify-around items-center md:flex-row gap-10 md:gap-0"
-        >
+        <motion.div className="pb-10 flex flex-col justify-around items-center md:flex-row gap-10 md:gap-0">
           <h2 className="md:text-xl text-[20px] text-gray-500 w-[80%] md:w-[40%]">
             Estudante dedicado e entusiasta de tecnologia, atualmente cursando
             Sistema de Informação na Faculdade Santíssimo Sacramento. Estagiário
@@ -72,10 +39,8 @@ export default function About() {
         </motion.div>
       </div>
 
-      <div
-        className="flex flex-col items-center gap-7 md:gap-0 justify-evenly text-white w-full md:flex-row"
-      >
-        <div className="relative w-full md:w-auto flex items-center justify-center md:flex-none" >
+      <div className="flex flex-col items-center gap-7 md:gap-0 justify-evenly text-white w-full md:flex-row">
+        <div className="relative w-full md:w-auto flex items-center justify-center md:flex-none">
           <motion.img
             src="/bg.jpg"
             alt="img"
@@ -108,30 +73,31 @@ export default function About() {
               <br />
               <code className="text-blue-400">2020:</code>{" "}
               <code className="text-pink-400">
-              &quot;Aprendendo HTML5 - CSS - JS - Responsive e conceitos&quot;,
+                &quot;Aprendendo HTML5 - CSS - JS - Responsive e
+                conceitos&quot;,
               </code>
               <br />
               <code className="text-blue-400">2021:</code>{" "}
               <code className="text-pink-400">
-              &quot;Apredendo Conceitos Avançados De Javascript&quot;,
+                &quot;Apredendo Conceitos Avançados De Javascript&quot;,
               </code>
               <br />
               <code className="text-blue-400">2022:</code>{" "}
               <code className="text-pink-400">
-              &quot;Aprendendo consumo de API e a sua criação, React - React-native
-                - styled-components - gsap&quot;,
+                &quot;Aprendendo consumo de API e a sua criação, React -
+                React-native - styled-components - gsap&quot;,
               </code>
               <br />
               <code className="text-blue-400">2023:</code>{" "}
               <code className="text-pink-400">
-              &quot;Aprendendo Nextjs - Minha Primeira vaga de trabalho como Dev
-                Fullstack - Estágio&quot;,
+                &quot;Aprendendo Nextjs - Minha Primeira vaga de trabalho como
+                Dev Fullstack - Estágio&quot;,
               </code>
               <br />
               <code className="text-blue-400">2024:</code>{" "}
               <code className="text-pink-400">
-                &quot;Preparatório para avançar com minhas habilidades na carreira e
-                mais estudo&quot;
+                &quot;Preparatório para avançar com minhas habilidades na
+                carreira e mais estudo&quot;
               </code>
               <br />
               <code className="text-green-400">{"};"}</code>
@@ -169,7 +135,7 @@ export default function About() {
               <br />
               <code className="text-blue-400">2023:</code>{" "}
               <code className="text-pink-400 max-w-[80%]">
-              &quot;Criação de projetos:{" "}
+                &quot;Criação de projetos:{" "}
                 <a
                   href="https://github.com/Igordevz/authentication---backend"
                   target="_blank"
@@ -189,7 +155,7 @@ export default function About() {
               <br />
               <code className="text-blue-400">2023.2:</code>{" "}
               <code className="text-pink-400 max-w-[80%]">
-              &quot; Minha primeira vaga como fullstack - estágio &quot; 
+                &quot; Minha primeira vaga como fullstack - estágio &quot;
               </code>
               <br />
               <code className="text-green-400">{"};"}</code>

@@ -70,8 +70,14 @@ body{
 
 }
 .char {
+  transform: translateY(115px);
+}
+.osmenu{
   opacity: 0;
   transform: translateY(115px);
+}
+.osmenu h2, .osmenu a, .osmenu h1, .osmenu p{
+  overflow: hidden;
 }
 
 h3{
