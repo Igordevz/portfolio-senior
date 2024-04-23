@@ -75,7 +75,7 @@ export default function About() {
       <div
         className="flex flex-col items-center gap-7 md:gap-0 justify-evenly text-white w-full md:flex-row"
       >
-        <div className="relative w-full md:w-auto flex items-center justify-center md:flex-none" data-scroll data-scroll-speed={0.11}>
+        <div className="relative w-full md:w-auto flex items-center justify-center md:flex-none" >
           <motion.img
             src="/bg.jpg"
             alt="img"
