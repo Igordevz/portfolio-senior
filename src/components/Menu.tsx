@@ -58,12 +58,12 @@ export default function Menu() {
 
   return (
     <>
-      <header className="fixed left-0 top-0  w-full h-screen  z-50">
+      <header className="fixed left-0 top-0  w-auto h-auto  z-50">
         <motion.div
           variants={scaleAnimation}
           initial="initial"
           animate={menu ? "enter" : "closed"}
-          className="fixed bg-blue-800 w-full  h-screen right-0 flex flex-col"
+          className="fixed bg-blue-800 w-full  h-screen right-0 flex flex-col z-50"
         >
           <div className="w-full relative h-20 overflow-hidden">
             <h2
@@ -189,7 +189,7 @@ export default function Menu() {
             </div>
           </div>
         </motion.div>
-        <div className="fixed right-10 bottom-5">
+        <div className="fixed right-10 bottom-5 z-50">
           <button
             onClick={() => setMenu(!menu)}
             className="border-none bg-none p-4 text-black bg-white rounded-full"
