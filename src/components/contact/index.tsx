@@ -1,6 +1,12 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import { Github, Instagram, Linkedin, Send } from "lucide-react";
 export default function Contact() {
+
+  const [name, setName] = useState("");
+
+
+
   return (
     <div id="contact" className="w-full h-[auto] flex xl:flex-row flex-col items-center xl:gap-0 gap-6 xl:items-baseline justify-center xl:justify-around bg-black py-20">
       <div className="flex xl:ml-20 w-[90%] xl:w-auto flex-col text-white justify-center gap-6  ">
@@ -8,13 +14,14 @@ export default function Contact() {
 
         <div className="flex flex-row relative items-center">
           <input
+            onChange={(e) => setName(e.target.value)}
             type="text"
             placeholder="Informe apenas seu primeiro nome"
             className="outline-none border-[1px] relative border-gray-700 rounded-lg bg-zinc-950 py-4 pl-4 w-[100%]"
           />
-          <button className=" absolute right-4">
+          <a target="_blank" href={`https://api.whatsapp.com/send?phone=5575998045284&text=Me%20chamo%2C%20${name ? name : "*sem nome*"}.%20Podemos%20trocar%20uma%20ideia?`} className=" absolute right-4" >
             <Send className="text-zinc-300" />
-          </button>
+          </a>
         </div>
         <p className="text-zinc-800 max-w-[90%]">
           Esta mensagem será enviada diretamente para o meu número de telefone,
