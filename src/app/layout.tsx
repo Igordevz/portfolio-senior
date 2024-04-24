@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Igor Santos | 🎧",
-  description: "Portfolio de Igor Santos",
+  description: "Igordevz - Portfolio de Igor Mateus Santos Silva ",
 };
 
 export default function RootLayout({

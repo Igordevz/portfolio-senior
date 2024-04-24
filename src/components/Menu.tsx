@@ -40,9 +40,10 @@ export default function Menu() {
 
     if (!menu) {
       gsap.to(".osmenu", {
+        opacity: 1,
         y: 115,
-
-        stagger: 0.01,
+        stagger: 0.008,
+        delay: 0.3,
         duration: 0.5,
       });
     } else {
@@ -85,7 +86,6 @@ export default function Menu() {
             <a
               onClick={() => setMenu(false)}
               href="#about"
-              
               id="t2"
               className=" md:text-4xl text-xl overflow-hidden hover:translate-x-2 transition-all text-zinc-300"
             >
@@ -159,31 +159,28 @@ export default function Menu() {
               </h2>
               <div className="flex flex-row justify-ce text-right">
                 <a
-                  id="u6"
                   className="transition-all overflow-hidden mr-2 hover:text-zinc-400"
                   target="_blank"
                   href="https://github.com/Igordevz"
                 >
                   {" "}
-                  <Github />
+                  <Github className="osmenu" />
                 </a>
                 <a
-                  id="u7"
                   className="transition-all overflow-hidden mx-2 hover:text-zinc-400"
                   target="_blank"
                   href="https://www.instagram.com/euigor_santoss/"
                 >
                   {" "}
-                  <Instagram />
+                  <Instagram className="osmenu" />
                 </a>
                 <a
-                  id="u8"
                   className="transition-all overflow-hidden mx-2 hover:text-zinc-400"
                   target="_blank"
                   href="https://www.linkedin.com/in/igor-silva-386b09255/"
                 >
                   {" "}
-                  <Linkedin />
+                  <Linkedin className="osmenu" />
                 </a>
               </div>
             </div>
@@ -194,7 +191,11 @@ export default function Menu() {
             onClick={() => setMenu(!menu)}
             className="border-none bg-none p-4 text-black bg-white rounded-full"
           >
-       {menu ?      <X className="text-xl" />: <MenuIcon className="text-xl"/>}
+            {menu ? (
+              <X className="text-xl" />
+            ) : (
+              <MenuIcon className="text-xl" />
+            )}
           </button>
         </div>
       </header>

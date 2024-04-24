@@ -79,7 +79,7 @@ export default function ContentPrimary() {
           <div className="w-full flex items-center justify-center flex-col   ">
             {" "}
             <h1
-              className="text-[white]  sm:text-5xl lg:text-[150px] md:text-9xl text-5xl  w-[100%] md:w-[70%]  text-center"
+              className="outline-4 tracking-tighter  font-normal sm:text-5xl lg:text-[150px] md:text-9xl text-5xl  w-[100%] md:w-[70%]  text-center"
               id="initial"
               onMouseEnter={() => {
                 setActive(true);
@@ -88,7 +88,7 @@ export default function ContentPrimary() {
                 setActive(false);
               }}
             >
-              MEU PORTFÓLIO
+ Meu portfólio 
             </h1>
             <p className="text-zinc-300 text-center   w-[100%] md:w-[70%] z-10 ">
               Sou um programador e gostaria que me conhecesse.
