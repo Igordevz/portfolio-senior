@@ -109,7 +109,7 @@ export default function Modal({ modal, projects }: any) {
         initial="initial"
         animate={active ? "enter" : "closed"}
       >
-        <h1>Click</h1>
+        <h2>Click</h2>
       </motion.div>
     </>
   );
