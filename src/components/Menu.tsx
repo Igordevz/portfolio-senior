@@ -93,7 +93,7 @@ export default function Menu() {
             </a>
             <a
               onClick={() => setMenu(false)}
-              href="#"
+              href="#habilidades"
               id="t3"
               className=" md:text-4xl text-xl overflow-hidden hover:translate-x-2 transition-all text-zinc-300"
             >
