@@ -23,28 +23,26 @@ export default function Contact() {
             <Send className="text-zinc-300" />
           </a>
         </div>
-        <p className="text-zinc-800 max-w-[90%]">
+        <p className="text-zinc-600 max-w-[90%]">
           Esta mensagem será enviada diretamente para o meu número de telefone,
           whatsApp.
         </p>
       </div>
 
-      <div className="text-zinc-800 flex flex-col gap-4 w-[90%] xl:w-auto">
-        <a target="_blank" href="" className="transition-all hover:text-zinc-300">
+      <div className="text-zinc-600 flex flex-col gap-4 w-[90%] xl:w-auto">
+        <a target="_blank" href="/works" className="transition-all hover:text-zinc-300">
           Para Empresas
         </a>
-        <a target="_blank" href="" className="transition-all hover:text-zinc-300">
+        <a target="_blank" href="https://github.com/Igordevz/Igordevz" className="transition-all hover:text-zinc-300">
           Frameworks Utilizados
         </a>
-        <a target="_blank" href="" className="transition-all hover:text-zinc-300">
-          Clientes
-        </a>
-        <a target="_blank" href="" className="transition-all hover:text-zinc-300">
-          Parcerias
-        </a>
+        <p  className="transition-all hover:text-zinc-300">
+          programadorigor.dev@gmail.com
+        </p>
+       
       </div>
 
-      <div className="text-zinc-800 flex flex-col gap-4 ">
+      <div className="text-zinc-600 flex flex-col gap-4 ">
         <h2 className="text-zinc-300 xl:text-xl">Redes Sociais</h2>
       <div className="flex flex-row justify-between">
       <a className="transition-all hover:text-zinc-400" target="_blank" href="https://github.com/Igordevz">

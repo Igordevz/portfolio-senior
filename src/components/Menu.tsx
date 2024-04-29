@@ -77,7 +77,7 @@ export default function Menu() {
           <div className={`ml-10 flex flex-col gap-6 overflow-hidden`}>
             <a
               onClick={() => setMenu(false)}
-              href="#projects"
+              href="/#projects"
               id="t1"
               className=" md:text-4xl text-xl overflow-hidden hover:translate-x-2 transition-all text-zinc-300"
             >
@@ -85,7 +85,7 @@ export default function Menu() {
             </a>
             <a
               onClick={() => setMenu(false)}
-              href="#about"
+              href="/#about"
               id="t2"
               className=" md:text-4xl text-xl overflow-hidden hover:translate-x-2 transition-all text-zinc-300"
             >
@@ -93,7 +93,7 @@ export default function Menu() {
             </a>
             <a
               onClick={() => setMenu(false)}
-              href="#habilidades"
+              href="/#habilidades"
               id="t3"
               className=" md:text-4xl text-xl overflow-hidden hover:translate-x-2 transition-all text-zinc-300"
             >
@@ -101,7 +101,7 @@ export default function Menu() {
             </a>
             <a
               onClick={() => setMenu(false)}
-              href="#education"
+              href="/#education"
               id="t4"
               className=" md:text-4xl text-xl overflow-hidden hover:translate-x-2 transition-all text-zinc-300"
             >
@@ -109,7 +109,7 @@ export default function Menu() {
             </a>
             <a
               onClick={() => setMenu(false)}
-              href="#contact"
+              href="/#contact"
               id="t5"
               className=" md:text-4xl text-xl overflow-hidden hover:translate-x-2 transition-all text-zinc-300"
             >
@@ -120,8 +120,8 @@ export default function Menu() {
           <div className="w-full flex md:flex-row flex-col justify-evenly  items-stretch pt-20 h-auto ml-10 md:ml-0 gap-10">
             <div className="text-zinc-200 flex flex-col gap-4 ">
               <a
-                target="_blank"
-                href=""
+                target=""
+                href="/works"
                 id="u1"
                 className="transition-all overflow-hidden hover:text-zinc-300"
               >
