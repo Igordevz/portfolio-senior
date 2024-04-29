@@ -119,38 +119,15 @@ export default function Menu() {
           <hr className="my-2" />
           <div className="w-full flex md:flex-row flex-col justify-evenly  items-stretch pt-20 h-auto ml-10 md:ml-0 gap-10">
             <div className="text-zinc-200 flex flex-col gap-4 ">
-              <a
-                target=""
-                href="/works"
-                id="u1"
-                className="transition-all overflow-hidden hover:text-zinc-300"
-              >
-                Para Empresas
-              </a>
-              <a
-                target="_blank"
-                href=""
-                id="u2"
-                className="transition-all overflow-hidden hover:text-zinc-300"
-              >
-                Frameworks Utilizados
-              </a>
-              <a
-                target="_blank"
-                href=""
-                id="u3"
-                className="transition-all overflow-hidden hover:text-zinc-300"
-              >
-                Clientes
-              </a>
-              <a
-                target="_blank"
-                href=""
-                id="u4"
-                className="transition-all overflow-hidden hover:text-zinc-300"
-              >
-                Parcerias
-              </a>
+            <a target="_blank" href="/works" className="transition-all hover:text-zinc-300">
+          Para Empresas
+        </a>
+        <a target="_blank" href="https://github.com/Igordevz/Igordevz" className="transition-all hover:text-zinc-300">
+          Frameworks Utilizados
+        </a>
+        <p  className="transition-all hover:text-zinc-300">
+          programadorigor.dev@gmail.com
+        </p>
             </div>
 
             <div className="text-zinc-200 flex flex-col gap-4  ">
