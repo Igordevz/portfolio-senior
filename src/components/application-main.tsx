@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import SplitType from "split-type";
 import eu from "../../public/eucomfudo.jpeg";
+import eu2 from "../../public/EditImg.jpg"
 import Image from "next/image";
 export default function ContentPrimary() {
   const [active, setActive] = useState(false);
