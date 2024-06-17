@@ -154,7 +154,7 @@ export default function Menu() {
                 <a
                   className="transition-all overflow-hidden mx-2 hover:text-zinc-400"
                   target="_blank"
-                  href="https://www.linkedin.com/in/igor-silva-386b09255/"
+                  href="https://br.linkedin.com/in/igor-mateus-santos-silva-41a361310?trk=people-guest_people_search-card"
                 >
                   {" "}
                   <Linkedin className="osmenu" />
